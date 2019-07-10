@@ -45,8 +45,6 @@ elif [ $nvprof_on = 1 ]; then
     PREFIX="nvprof --export-profile resnet50.nvvp -f ${PREFIX}"
 fi
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
-
 # run training
 if [ $single_gpu = 1 ]; then
     echo "using single GPU"
